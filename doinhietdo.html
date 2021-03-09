@@ -5,12 +5,16 @@
     <title>Đổi nhiệt độ</title>
 </head>
 <body>
-    <script>
-        let doC;
-        doC=prompt("Nhập độ C");
-        let C= parseFloat(doC);
-        let F= (9*C/5+32);
-        document.write(""+F);
+    <label for="doC">Nhập độ C</label>
+    <input type="number" id="doC">
+    <h4 id="doF"></h4>
+    <button type="button" onclick="doF()">Chuyển đổi</button>
+    <script type="text/javascript">
+        function doF(){
+            var c = parseInt(document.getElementById("doC").value)
+            var f = 9*c/5+32;
+            document.getElementById("doF").innerHTML = "Chuyển ra độ F là:" +f
+        }
     </script>
 </body>
 </html>
