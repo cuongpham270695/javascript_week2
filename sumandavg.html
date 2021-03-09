@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng điểm và trung bình</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let inputA;
+        let inputB;
+        let inputC;
+        inputA= prompt("Nhập điểm Lý");
+        inputB= prompt("Nhập điểm Hoá");
+        inputC= prompt("Nhập điểm Sinh");
+        let A = parseFloat(inputA);
+        let B = parseFloat(inputB);
+        let C = parseFloat(inputC);
+        let sum = (A+B+C);
+        document.write("Tổng điểm 3 môn là: " +sum);
+        let avg = sum/3;
+        document.write("Điểm trung bình 3 môn là: " +avg);
+    </script>
+</body>
+</html>
