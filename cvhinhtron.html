@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chu vi hình tròn</title>
+</head>
+<body>
+<label for="range">Nhập bán kính:</label>
+<input type="number" name="button" id="range">
+<h4 id="chuvi"></h4>
+<button type="button" onclick="bankinh()">Đáp án</button>
+<script type="text/javascript">
+    function bankinh(){
+        var r=parseFloat(document.getElementById("range").value)
+        const PI=3.14159265
+        var p=2*PI*r
+        document.getElementById("chuvi").innerHTML = "Chu vi hình tròn là:" +p
+    }
+</script>
+</body>
+</html>
