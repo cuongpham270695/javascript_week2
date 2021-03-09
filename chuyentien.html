@@ -20,8 +20,8 @@
             <option value="1">USD</option>
         </select>
         </label>
-    <h4 id="result"></h4>
-    <button onclick="change()">Change</button>
+    <h4 id="result" style="color: blue"></h4>
+    <button onclick="change()">Convert</button>
     <script type="text/javascript">
         function change(){
             var money=document.getElementById("amount").value;
@@ -30,7 +30,7 @@
             var result= money*to/from;
             var a= document.getElementById("to_cur");
             var atext= a.options[a.selectedIndex].text;//lấy text ở đối tượng được chọn
-            document.getElementById("result").innerHTML = +result +atext;
+            document.getElementById("result").innerHTML ="Result:" +result +atext;
         }
     </script>
 </body>
