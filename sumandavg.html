@@ -5,20 +5,33 @@
     <title>Tính tổng điểm và trung bình</title>
 </head>
 <body>
+    <label for="ly">Điểm lý</label>
+    <input type="number" id="ly">
+    <label for="hoa">Điểm hoá</label>
+    <input type="number" id="hoa">
+    <label for="sinh">Điểm sinh</label>
+    <input type="number" id="sinh">
+    <h4 id="sum"></h4>
+    <button type="button" onclick="sum()">Tổng điểm</button>
+    <h4 id="avg"></h4>
+    <button type="button" onclick="avg()">Trung bình</button>
     <script type="text/javascript">
-        let inputA;
-        let inputB;
-        let inputC;
-        inputA= prompt("Nhập điểm Lý");
-        inputB= prompt("Nhập điểm Hoá");
-        inputC= prompt("Nhập điểm Sinh");
-        let A = parseFloat(inputA);
-        let B = parseFloat(inputB);
-        let C = parseFloat(inputC);
-        let sum = (A+B+C);
-        document.write("Tổng điểm 3 môn là: " +sum);
-        let avg = sum/3;
-        document.write("Điểm trung bình 3 môn là: " +avg);
+        function sum()
+        {
+            var a = parseFloat(document.getElementById("ly").value);
+            var b = parseFloat(document.getElementById("hoa").value);
+            var c = parseFloat(document.getElementById("sinh").value);
+            var sum= a+b+c;
+            document.getElementById("sum").innerHTML = "Tổng điểm 3 môn là:" +sum;
+        }
+        function avg()
+        {
+            var a = parseFloat(document.getElementById("ly").value);
+            var b = parseFloat(document.getElementById("hoa").value);
+            var c = parseFloat(document.getElementById("sinh").value);
+            var avg= (a+b+c)/3;
+            document.getElementById("avg").innerHTML = "Điểm trung bình 3 môn là:" +avg;
+        }
     </script>
 </body>
 </html>
