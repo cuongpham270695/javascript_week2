@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+        <label>Amount
+        <input type="number" id="amount">
+        </label>
+        <label>From Currency
+        <select name="from_currency" id="from_cur">
+            <option value="1">USD</option>
+            <option value="23000">VNĐ</option>
+        </select>
+        </label>
+        <label>To Currency
+        <select name="to_currency" id="to_cur">
+            <option value="23000">VNĐ</option>
+            <option value="1">USD</option>
+        </select>
+        </label>
+    <h4 id="result"></h4>
+    <button onclick="change()">Change</button>
+    <script type="text/javascript">
+        function change(){
+            var money=document.getElementById("amount").value;
+            var from=document.getElementById("from_cur").value;
+            var to=document.getElementById("to_cur").value;
+            var result= money*to/from;
+            var a= document.getElementById("to_cur");
+            var atext= a.options[a.selectedIndex].text;//lấy text ở đối tượng được chọn
+            document.getElementById("result").innerHTML = +result +atext;
+        }
+    </script>
+</body>
+</html>
